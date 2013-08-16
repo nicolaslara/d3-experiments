@@ -18,7 +18,8 @@ while base < end:
 # Stockholm: 59.3294,18.0686
 # Taussat: 44.7208,-1.0722
 # Mafra: 38.9385,-9.3277
-coords = '38.9385,-9.3277'
+# Putbus: 54.3543,13.4765
+coords = '54.3543,13.4765'
 
 days = [d.isoformat() + '+0200' for d in dates]
 urls = ['https://api.forecast.io/forecast/3f166df6cbac36dc7b6ea176021bcb69/'+coords+',' + day
