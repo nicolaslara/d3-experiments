@@ -17,7 +17,8 @@ while base < end:
 
 # Stockholm: 59.3294,18.0686
 # Taussat: 44.7208,-1.0722
-coords = '44.7208,-1.0722'
+# Mafra: 38.9385,-9.3277
+coords = '38.9385,-9.3277'
 
 days = [d.isoformat() + '+0200' for d in dates]
 urls = ['https://api.forecast.io/forecast/3f166df6cbac36dc7b6ea176021bcb69/'+coords+',' + day
@@ -26,5 +27,4 @@ urls = ['https://api.forecast.io/forecast/3f166df6cbac36dc7b6ea176021bcb69/'+coo
 data = []
 for url in urls:
     response = requests.get(url)
-    for day in [i['temperature'] for i in json.loads(response.content)['hourly']['data']]:
-        print day
+    print [i['temperature'] for i in json.loads(response.content)['hourly']['data']]
